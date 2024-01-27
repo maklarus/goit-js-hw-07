@@ -26,11 +26,8 @@ const images = [
 ];
 
 const gallery = document.querySelector(".gallery");
-gallery.style.display = "flex";
-gallery.style.gap = "10px";
-gallery.style.flexWrap = "wrap";
 
-images.map(({ url, alt }) => {
+images.forEach(({ url, alt }) => {
   gallery.insertAdjacentHTML(
     "beforeend",
     `<li><img class="img" src="${url}" alt="${alt}" width="530" height="400"></li>`
